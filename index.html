@@ -18,5 +18,23 @@ function myFunction() {
   document.getElementById("demo").innerHTML = "Paragraph changed.";
 }
 </script>
+<script>
+
+  const url = new URL(
+    "https://app.matchplay.events/api/tournaments/184201/standings"
+);
+
+const headers = {
+    "Authorization": "Bearer YOUR_API_TOKEN",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+
+</script>
 </body>
 </html>
